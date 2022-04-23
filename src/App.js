@@ -1,3 +1,5 @@
+import './App.css';
+
 import React, { useState } from "react";
 
 function App() {
@@ -32,22 +34,23 @@ function App() {
               Aumentar
             </button>
             <button
+              className="btn btn-danger mx-3"
+              onClick={() => setContador(contador - 1)}
+            >
+              Disminuir
+            </button>
+            <button
               className="btn btn-secondary mx-3"
               onClick={() => setContador(0)}
               disabled={contador===0}
             >
               Reiniciar
             </button>
-            <button
-              className="btn btn-danger mx-3"
-              onClick={() => setContador(contador - 1)}
-            >
-              Disminuir
-            </button>
           </div>
         </div>
       </div>
     </div>
+    
   );
 }
 
